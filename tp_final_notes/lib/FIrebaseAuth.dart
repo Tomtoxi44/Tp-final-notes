@@ -45,11 +45,11 @@ class _AuthPageState extends State<AuthPage> {
     showDialog(
       context: context,
       builder: (ctx) => AlertDialog(
-        title: Text('Erreur'),
+        title: const Text('Erreur'),
         content: Text(message),
         actions: <Widget>[
           TextButton(
-            child: Text('Ok'),
+            child: const Text('Ok'),
             onPressed: () {
               Navigator.of(ctx).pop();
             },
@@ -69,7 +69,7 @@ class _AuthPageState extends State<AuthPage> {
       ),
       body: Center(
         child: Padding(
-          padding: EdgeInsets.all(16.0),
+          padding: const EdgeInsets.all(16.0),
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
@@ -83,9 +83,9 @@ class _AuthPageState extends State<AuthPage> {
                     borderSide: BorderSide(color: Colors.deepPurpleAccent),
                   ),
                 ),
-                style: TextStyle(color: Colors.white),
+                style: const TextStyle(color: Colors.white),
               ),
-              SizedBox(height: 8),
+              const SizedBox(height: 8),
               TextField(
                 controller: _passwordController,
                 obscureText: true,
@@ -97,11 +97,11 @@ class _AuthPageState extends State<AuthPage> {
                     borderSide: BorderSide(color: Colors.deepPurpleAccent),
                   ),
                 ),
-                style: TextStyle(color: Colors.white),
+                style: const TextStyle(color: Colors.white),
               ),
-              SizedBox(height: 16),
+              const SizedBox(height: 16),
               _isLoading
-                  ? CircularProgressIndicator()
+                  ? const CircularProgressIndicator()
                   : ElevatedButton(
                       style: ElevatedButton.styleFrom(
                         foregroundColor: Colors.white, backgroundColor: Colors.deepPurple,
